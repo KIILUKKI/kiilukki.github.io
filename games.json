@@ -6,8 +6,8 @@
     "link": "games/snake/index.html"
   },
   {
-    "title": "Stack Game",
-    "description": "Stack the moving blocks perfectly to build the tallest tower!",
+    "title": "3D Stack Game",
+    "description": "Stack the moving 3D blocks perfectly to build the tallest tower!",
     "cover": "assets/covers/stack.jpg",
     "link": "games/stack/index.html"
   }
