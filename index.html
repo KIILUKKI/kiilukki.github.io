@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="logo">🎮 GameHub</div>
     <ul class="nav-links">
@@ -16,16 +17,30 @@
     </ul>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero">
     <h1>Play Classic & Modern Web Games</h1>
     <p>Dive into timeless classics and fun arcade experiences, all in your browser.</p>
-    <a href="#games" class="cta-btn">Start Playing</a>
+    <a href="#games" class="cta-btn">Browse Games</a>
   </header>
 
+  <!-- Search & Filter -->
+  <section class="controls">
+    <input type="text" id="search" placeholder="🔍 Search games..." />
+    <select id="category">
+      <option value="all">All Categories</option>
+      <option value="arcade">Arcade</option>
+      <option value="puzzle">Puzzle</option>
+      <option value="retro">Retro</option>
+    </select>
+  </section>
+
+  <!-- Game Grid -->
   <main id="games" class="game-grid"></main>
 
+  <!-- Footer -->
   <footer>
-    <small>© 2025 Game Hub — All games are open-source recreations</small>
+    <small>© 2025 Game Hub — Open-source web game collection</small>
   </footer>
 
   <script src="scripts.js"></script>
