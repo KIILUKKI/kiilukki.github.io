@@ -3,30 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Snake Game</title>
+  <title>Game Hub</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>🐍 Snake Game</h1>
-    <p>Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to play.</p>
+    <h1>🎮 Game Hub</h1>
+    <p>Select a game below to play in your browser.</p>
   </header>
 
-  <main>
-    <div class="game-wrapper">
-      <canvas id="gameCanvas" width="400" height="400"></canvas>
-      <div class="score-panel">
-        <span id="score">Score: 0</span>
-        <button id="restartBtn">Restart</button>
+  <main class="container">
+    <aside class="game-list">
+      <h2>Games</h2>
+      <ul>
+        <li><button data-src="games/snake/index.html">🐍 Snake</button></li>
+      </ul>
+    </aside>
+
+    <section class="play-area">
+      <div id="placeholder">Choose a game from the left.</div>
+      <div id="frame-wrap" style="display:none;">
+        <iframe id="game-frame" src="" frameborder="0"
+          sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>
     <small>Built with HTML, CSS & JS — hosted on GitHub Pages.</small>
   </footer>
 
-  <script src="snake.js"></script>
+  <script>
+    const buttons = document.querySelectorAll('.game-list button');
+    const frameWrap = document.getElementById('frame-wrap');
+    const iframe = document.getElementById('game-frame');
+    const placeholder = document.getElementById('placeholder');
+
+    buttons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        iframe.src = btn.getAttribute('data-src');
+        frameWrap.style.display = 'block';
+        placeholder.style.display = 'none';
+        iframe.scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
 </body>
 </html>
-
