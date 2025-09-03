@@ -16,5 +16,11 @@
     "description": "A 3D tower loader animation from Uiverse.io.",
     "cover": "assets/covers/loader.jpg",
     "link": "games/loader/index.html"
+  },
+  {
+    "title": "Stack Game",
+    "description": "Stack the moving blocks perfectly to build the tallest tower!",
+    "cover": "assets/covers/stack.jpg",
+    "link": "games/stack/index.html"
   }
 ]
