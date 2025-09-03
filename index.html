@@ -7,12 +7,25 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>🎮 Game Hub</h1>
-    <p>Play classic browser games with a modern experience</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">🎮 GameHub</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Play Classic & Modern Web Games</h1>
+    <p>Dive into timeless classics and fun arcade experiences, all in your browser.</p>
+    <a href="#games" class="cta-btn">Start Playing</a>
   </header>
 
-  <main class="game-grid">
+  <!-- Game Grid -->
+  <main id="games" class="game-grid">
     <a href="games/snake/index.html" class="game-card">
       <div class="thumb">
         <img src="assets/covers/snake.jpg" alt="Snake screenshot">
@@ -29,14 +42,14 @@
       </div>
       <div class="info">
         <h2>Tetris</h2>
-        <p>Stack the blocks and clear lines in this puzzle legend.</p>
+        <p>Stack blocks and clear lines in this puzzle legend.</p>
       </div>
     </a>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <small>© 2025 Game Hub — All games are open-source browser recreations</small>
+    <small>© 2025 Game Hub — All games are open-source recreations</small>
   </footer>
 </body>
 </html>
-
