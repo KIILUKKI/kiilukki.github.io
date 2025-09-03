@@ -6,18 +6,6 @@
     "link": "games/snake/index.html"
   },
   {
-    "title": "Tetris",
-    "description": "Stack blocks and clear lines in this puzzle legend.",
-    "cover": "assets/covers/tetris.jpg",
-    "link": "games/tetris/index.html"
-  },
-  {
-    "title": "Loader Demo",
-    "description": "A 3D tower loader animation from Uiverse.io.",
-    "cover": "assets/covers/loader.jpg",
-    "link": "games/loader/index.html"
-  },
-  {
     "title": "Stack Game",
     "description": "Stack the moving blocks perfectly to build the tallest tower!",
     "cover": "assets/covers/stack.jpg",
