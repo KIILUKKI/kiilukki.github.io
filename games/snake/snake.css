@@ -1,14 +1,16 @@
 :root {
   --bg:#0f172a;
   --card:#1e293b;
-  --accent:#22d3ee;
+  --accent:#38bdf8;
+  --accent-hover:#7dd3fc;
   --snake:#4ade80;
   --food:#f87171;
-  --text:#e2e8f0;
+  --text:#f1f5f9;
 }
+
 body {
   margin:0;
-  font-family:'Segoe UI', sans-serif;
+  font-family:'Inter','Segoe UI',sans-serif;
   background:linear-gradient(180deg,#020617,#0f172a);
   color:var(--text);
   display:flex;
@@ -16,44 +18,55 @@ body {
   align-items:center;
   padding:1rem;
 }
+
 header {
   text-align:center;
+  margin-bottom:1rem;
 }
-h1 { color:var(--accent); margin-bottom:0.3rem; }
+h1 { color:var(--accent); margin:0.2rem 0; }
+p { opacity:0.8; margin:0.2rem 0; }
+
 .back-btn {
   display:inline-block;
   margin-top:0.5rem;
   padding:0.4rem 0.8rem;
   background:var(--accent);
-  border-radius:6px;
+  border-radius:8px;
   color:#0f172a;
   text-decoration:none;
+  font-weight:600;
+  transition:background 0.2s;
 }
-.back-btn:hover { background:#67e8f9; }
+.back-btn:hover { background:var(--accent-hover); }
+
 .game-wrapper {
-  margin-top:1rem;
   background:var(--card);
   padding:1rem;
   border-radius:16px;
   box-shadow:0 8px 24px rgba(0,0,0,0.5);
 }
+
 canvas {
   background:#0a0f1e;
   border:2px solid var(--accent);
   border-radius:8px;
 }
+
 .score-panel {
   margin-top:0.75rem;
   display:flex;
   justify-content:space-between;
-  color:var(--text);
+  align-items:center;
 }
+
 #restartBtn {
-  padding:0.3rem 0.6rem;
+  padding:0.4rem 0.8rem;
   background:var(--accent);
   border:none;
   border-radius:6px;
   cursor:pointer;
   color:#0f172a;
+  font-weight:600;
 }
-#restartBtn:hover { background:#67e8f9; }
+#restartBtn:hover { background:var(--accent-hover); }
+
