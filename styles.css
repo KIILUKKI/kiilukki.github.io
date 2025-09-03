@@ -1,20 +1,22 @@
 :root {
   --bg:#0f172a;
   --card:#1e293b;
-  --accent:#22d3ee;
-  --text:#e2e8f0;
+  --accent:#38bdf8;
+  --accent-hover:#7dd3fc;
+  --text:#f1f5f9;
 }
 
 * { box-sizing:border-box; }
 body {
   margin:0;
-  font-family:'Segoe UI', sans-serif;
+  font-family:'Inter', 'Segoe UI', sans-serif;
   background:linear-gradient(180deg,#020617,#0f172a);
   color:var(--text);
   min-height:100vh;
   display:flex;
   flex-direction:column;
 }
+
 header {
   text-align:center;
   padding:2rem 1rem 1rem;
@@ -22,46 +24,64 @@ header {
 header h1 {
   margin:0;
   color:var(--accent);
-  font-size:2.2rem;
+  font-size:2.5rem;
+  font-weight:700;
 }
-header p { opacity:0.8; }
+header p { opacity:0.85; }
+
 .game-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-  gap:1rem;
-  padding:1rem 2rem;
   flex:1;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+  padding:2rem;
 }
+
 .game-card {
-  display:flex;
-  flex-direction:column;
-  text-decoration:none;
   background:var(--card);
-  border-radius:14px;
+  border-radius:16px;
+  text-decoration:none;
+  color:inherit;
   overflow:hidden;
   box-shadow:0 6px 16px rgba(0,0,0,0.5);
-  transition:transform 0.2s, box-shadow 0.2s;
+  transform:translateY(0);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+  display:flex;
+  flex-direction:column;
 }
 .game-card:hover {
-  transform:translateY(-4px);
-  box-shadow:0 12px 24px rgba(0,0,0,0.6);
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,0.6);
+}
+.game-card .thumb {
+  overflow:hidden;
+  height:180px;
 }
 .game-card img {
   width:100%;
-  height:160px;
+  height:100%;
   object-fit:cover;
+  transition:transform 0.3s ease;
+}
+.game-card:hover img {
+  transform:scale(1.08);
 }
 .game-card .info {
   padding:1rem;
-  color:var(--text);
 }
 .game-card h2 {
   margin:0 0 0.3rem;
   font-size:1.3rem;
   color:var(--accent);
 }
+.game-card p {
+  margin:0;
+  font-size:0.9rem;
+  opacity:0.8;
+}
 footer {
   text-align:center;
   padding:1rem;
+  font-size:0.85rem;
   opacity:0.7;
 }
