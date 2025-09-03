@@ -3,12 +3,14 @@
     "title": "Snake",
     "description": "Eat, grow, survive. The timeless arcade classic!",
     "cover": "assets/covers/snake.jpg",
-    "link": "games/snake/index.html"
+    "link": "games/snake/index.html",
+    "category": "arcade"
   },
   {
     "title": "Tetris",
     "description": "Stack blocks and clear lines in this puzzle legend.",
     "cover": "assets/covers/tetris.jpg",
-    "link": "games/tetris/index.html"
+    "link": "games/tetris/index.html",
+    "category": "puzzle"
   }
 ]
