@@ -3,23 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Snake</title>
+  <title>Snake Game</title>
   <link rel="stylesheet" href="snake.css" />
 </head>
 <body>
   <header>
     <h1>🐍 Snake</h1>
-    <p>Use Arrow Keys or WASD to move.</p>
+    <p>Use Arrow Keys or WASD to move</p>
     <a href="../../index.html" class="back-btn">⬅ Back to Hub</a>
   </header>
 
-  <div class="game-wrapper">
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
-    <div class="score-panel">
-      <span id="score">Score: 0</span>
-      <button id="restartBtn">Restart</button>
+  <main>
+    <div class="game-wrapper">
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+      <div class="score-panel">
+        <span id="score">Score: 0</span>
+        <button id="restartBtn">Restart</button>
+      </div>
     </div>
-  </div>
+  </main>
 
   <script src="snake.js"></script>
 </body>
