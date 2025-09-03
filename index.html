@@ -9,44 +9,30 @@
 <body>
   <header>
     <h1>🎮 Game Hub</h1>
-    <p>Select a game below to play in your browser.</p>
+    <p>Select a game and start playing!</p>
   </header>
 
-  <main class="container">
-    <aside class="game-list">
-      <h2>Games</h2>
-      <ul>
-        <li><button data-src="games/snake/index.html">🐍 Snake</button></li>
-      </ul>
-    </aside>
-
-    <section class="play-area">
-      <div id="placeholder">Choose a game from the left.</div>
-      <div id="frame-wrap" style="display:none;">
-        <iframe id="game-frame" src="" frameborder="0"
-          sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+  <main class="game-grid">
+    <a href="games/snake/index.html" class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Snake_game.png" alt="Snake screenshot">
+      <div class="info">
+        <h2>Snake</h2>
+        <p>Classic arcade snake game. Eat food, grow longer, avoid crashing!</p>
       </div>
-    </section>
+    </a>
+
+    <a href="games/tetris/index.html" class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Tetris.png" alt="Tetris screenshot">
+      <div class="info">
+        <h2>Tetris</h2>
+        <p>Stack the blocks and clear rows in this timeless puzzle game.</p>
+      </div>
+    </a>
   </main>
 
   <footer>
-    <small>Built with HTML, CSS & JS — hosted on GitHub Pages.</small>
+    <small>All games run in the browser — no downloads needed.</small>
   </footer>
-
-  <script>
-    const buttons = document.querySelectorAll('.game-list button');
-    const frameWrap = document.getElementById('frame-wrap');
-    const iframe = document.getElementById('game-frame');
-    const placeholder = document.getElementById('placeholder');
-
-    buttons.forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        iframe.src = btn.getAttribute('data-src');
-        frameWrap.style.display = 'block';
-        placeholder.style.display = 'none';
-        iframe.scrollIntoView({behavior:'smooth'});
-      });
-    });
-  </script>
 </body>
 </html>
+
