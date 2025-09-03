@@ -1,47 +1,59 @@
 :root {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --accent: #22d3ee;
-    --snake: #4ade80;
-    --food: #f87171;
-    --text: #e2e8f0;
-  }
-  body {
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:linear-gradient(180deg,#020617,#0f172a);
-    color:var(--text);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:1rem;
-  }
-  h1 { color: var(--accent); }
-  .game-wrapper {
-    margin-top:1rem;
-    background:var(--card);
-    padding:1rem;
-    border-radius:16px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.5);
-  }
-  canvas {
-    background:#0a0f1e;
-    border:2px solid var(--accent);
-    border-radius:8px;
-  }
-  .score-panel {
-    margin-top:0.75rem;
-    display:flex;
-    justify-content:space-between;
-    color:var(--text);
-  }
-  #restartBtn {
-    padding:0.3rem 0.6rem;
-    background:var(--accent);
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-    color:#0f172a;
-  }
-  #restartBtn:hover { background:#67e8f9; }
-  
+  --bg:#0f172a;
+  --card:#1e293b;
+  --accent:#22d3ee;
+  --snake:#4ade80;
+  --food:#f87171;
+  --text:#e2e8f0;
+}
+body {
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background:linear-gradient(180deg,#020617,#0f172a);
+  color:var(--text);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:1rem;
+}
+header {
+  text-align:center;
+}
+h1 { color:var(--accent); margin-bottom:0.3rem; }
+.back-btn {
+  display:inline-block;
+  margin-top:0.5rem;
+  padding:0.4rem 0.8rem;
+  background:var(--accent);
+  border-radius:6px;
+  color:#0f172a;
+  text-decoration:none;
+}
+.back-btn:hover { background:#67e8f9; }
+.game-wrapper {
+  margin-top:1rem;
+  background:var(--card);
+  padding:1rem;
+  border-radius:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.5);
+}
+canvas {
+  background:#0a0f1e;
+  border:2px solid var(--accent);
+  border-radius:8px;
+}
+.score-panel {
+  margin-top:0.75rem;
+  display:flex;
+  justify-content:space-between;
+  color:var(--text);
+}
+#restartBtn {
+  padding:0.3rem 0.6rem;
+  background:var(--accent);
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  color:#0f172a;
+}
+#restartBtn:hover { background:#67e8f9; }
