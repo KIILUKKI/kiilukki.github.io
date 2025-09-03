@@ -10,5 +10,11 @@
     "description": "Stack blocks and clear lines in this puzzle legend.",
     "cover": "assets/covers/tetris.jpg",
     "link": "games/tetris/index.html"
+  },
+  {
+    "title": "Loader Demo",
+    "description": "A 3D tower loader animation from Uiverse.io.",
+    "cover": "assets/covers/loader.jpg",
+    "link": "games/loader/index.html"
   }
 ]
