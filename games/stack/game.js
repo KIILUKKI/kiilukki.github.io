@@ -97,3 +97,4 @@ canvas.addEventListener("click", () => {
 });
 
 startGame();
+ 
