@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minun selainpelit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Pelihubi — Pelaa suoraan selaimessa</h1>
+    <p>Valitse peli listasta — peli latautuu sivun keskelle.</p>
+  </header>
+
+  <main class="container">
+    <aside class="game-list">
+      <h2>Pelit</h2>
+      <ul id="games">
+        <!-- Lisää pelit tänne: data-src="games/<kansio>/index.html" -->
+        <li><button data-src="games/pong/index.html">Pong</button></li>
+        <li><button data-src="games/snake/index.html">Snake</button></li>
+        <li><button data-src="games/2048/index.html">2048</button></li>
+        <li><button data-src="games/minesweeper/index.html">Minesweeper</button></li>
+      </ul>
+      <p class="note">Voit lisätä pelejä luomalla kansion <code>games/<pelinimi>/</code></p>
+    </aside>
+
+    <section class="play-area">
+      <div id="placeholder">
+        Valitse peli vasemmalta.
+      </div>
+      <div id="frame-wrap" style="display:none;">
+        <iframe id="game-frame" src="" frameborder="0" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Muista käyttää avoimia tai omia pelejä — katso README lisätietoja.</small>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('#games button');
+    const frameWrap = document.getElementById('frame-wrap');
+    const iframe = document.getElementById('game-frame');
+    const placeholder = document.getElementById('placeholder');
+
+    buttons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const src = btn.getAttribute('data-src');
+        // Näytetään iframe
+        iframe.src = src;
+        frameWrap.style.display = 'block';
+        placeholder.style.display = 'none';
+        // scrollataan peliin (mobiili)
+        iframe.scrollIntoView({behavior: 'smooth'});
+      });
+    });
+
+    // Paluupainike (klick iso otsikko) - voi muokata
+    document.querySelector('header h1').addEventListener('click', ()=>{
+      iframe.src = '';
+      frameWrap.style.display = 'none';
+      placeholder.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
