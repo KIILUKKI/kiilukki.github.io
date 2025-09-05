@@ -28,5 +28,11 @@
     "description": "Swipe, merge tiles, and try to reach the 2048 tile!",
     "cover": "assets/covers/2048.jpg",
     "link": "games/2048/index.html"
+  },
+  {
+    "title": "Clumsy Bird",
+    "description": "Flap your wings, dodge pipes, and see how far you can fly!",
+    "cover": "assets/covers/clumsybird.jpg",
+    "link": "games/clumsybird/index.html"
   }
 ]
