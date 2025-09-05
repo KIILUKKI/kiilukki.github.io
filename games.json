@@ -22,5 +22,11 @@
     "description": "Try your luck against the dealer in this classic card game with betting!",
     "cover": "assets/covers/blackjack.jpg",
     "link": "games/blackjack/index.html"
+  },
+  {
+    "title": "2048",
+    "description": "Swipe, merge tiles, and try to reach the 2048 tile!",
+    "cover": "assets/covers/2048.jpg",
+    "link": "games/2048/index.html"
   }
 ]
