@@ -10,5 +10,11 @@
     "description": "Stack the moving 3D blocks perfectly to build the tallest tower!",
     "cover": "assets/covers/stack.jpg",
     "link": "games/stack/index.html"
+  },
+  {
+    "title": "Tetris",
+    "description": "Drop blocks, clear lines, and chase that high score!",
+    "cover": "assets/covers/tetris.jpg",
+    "link": "games/tetris/index.html"
   }
 ]
