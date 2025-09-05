@@ -18,9 +18,9 @@
     "link": "games/tetris/index.html"
   },
   {
-    "title": "SuperTux Racer",
-    "description": "Race with Tux the penguin through icy tracks and snowy landscapes!",
-    "cover": "assets/covers/supertuxracer.jpg",
-    "link": "games/supertuxracer/index.html"
+    "title": "Blackjack",
+    "description": "Try your luck against the dealer in this classic card game with betting!",
+    "cover": "assets/covers/blackjack.jpg",
+    "link": "games/blackjack/index.html"
   }
 ]
