@@ -16,5 +16,11 @@
     "description": "Drop blocks, clear lines, and chase that high score!",
     "cover": "assets/covers/tetris.jpg",
     "link": "games/tetris/index.html"
+  },
+  {
+    "title": "SuperTux Racer",
+    "description": "Race with Tux the penguin through icy tracks and snowy landscapes!",
+    "cover": "assets/covers/supertuxracer.jpg",
+    "link": "games/supertuxracer/index.html"
   }
 ]
