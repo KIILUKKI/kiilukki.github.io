@@ -34,5 +34,11 @@
     "description": "Flap your wings, dodge pipes, and see how far you can fly!",
     "cover": "assets/covers/clumsybird.jpg",
     "link": "games/clumsybird/index.html"
+  },
+  {
+    "title": "Asteroids",
+    "description": "Pilot your ship, destroy asteroids, and survive as long as you can! Classic arcade shooter in HTML5.",
+    "cover": "assets/covers/asteroids.jpg",
+    "link": "games/asteroids/index.html"
   }
 ]
