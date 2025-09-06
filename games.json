@@ -1,7 +1,7 @@
 [
   {
     "title": "Geometry",
-    "description": "Hyppää, väistä esteet ja etene rytmin tahdissa tässä nopeatempoisessa tasohyppelyssä.",
+    "description": "Jump and don't explode.",
     "cover": "assets/covers/geometrydash.jpg",
     "link": "games/geometrydash/index.html"
   },
