@@ -4,7 +4,152 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Game Hub</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --glass: rgba(255, 255, 255, 0.07);
+      --accent: #38bdf8;
+      --accent-hover: #7dd3fc;
+      --text: #f1f5f9;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #020617, #0f172a);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      opacity: 0.85;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background: var(--accent);
+      color: #0f172a;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: var(--accent-hover); }
+
+    /* Game Grid */
+    .game-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 peliä per rivi */
+      gap: 2rem;
+      padding: 2rem;
+    }
+    @media (max-width: 1024px) {
+      .game-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .game-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .game-card {
+      background: var(--glass);
+      backdrop-filter: blur(14px);
+      border-radius: 16px;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      transform: translateY(0);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .game-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+    }
+    .game-card .thumb { height: 180px; overflow: hidden; }
+    .game-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .game-card:hover img { transform: scale(1.1); }
+    .game-card .info { padding: 1rem; }
+    .game-card h2 {
+      margin-bottom: 0.4rem;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+    .game-card p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -32,6 +177,32 @@
     <small>© 2025 Game Hub — Open-source web game collection</small>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script>
+    async function loadGames() {
+      const res = await fetch("games.json");
+      const games = await res.json();
+      const container = document.getElementById("games");
+
+      games.forEach(game => {
+        const card = document.createElement("a");
+        card.className = "game-card";
+        card.href = game.link;
+
+        card.innerHTML = `
+          <div class="thumb">
+            <img src="${game.cover}" alt="${game.title}">
+          </div>
+          <div class="info">
+            <h2>${game.title}</h2>
+            <p>${game.description}</p>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    loadGames();
+  </script>
 </body>
 </html>
