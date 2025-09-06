@@ -1,5 +1,11 @@
 [
   {
+    "title": "Geometry",
+    "description": "Hyppää, väistä esteet ja etene rytmin tahdissa tässä nopeatempoisessa tasohyppelyssä.",
+    "cover": "assets/covers/geometrydash.jpg",
+    "link": "games/geometrydash/index.html"
+  },
+  {
     "title": "Snake",
     "description": "Eat, grow, survive. The timeless arcade classic!",
     "cover": "assets/covers/snake.jpg",
