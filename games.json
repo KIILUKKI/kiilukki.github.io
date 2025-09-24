@@ -12,10 +12,10 @@
     "link": "games/snake/index.html"
   },
   {
-    "title": "Stack Game",
-    "description": "Stack the moving 3D blocks perfectly to build the tallest tower!",
-    "cover": "assets/covers/stack.jpg",
-    "link": "games/stack/index.html"
+    "title": "Minesweeper",
+    "description": "Just don't explode sucker.",
+    "cover": "assets/covers/minesweeper.jpg",
+    "link": "games/Minesweeper/index.html"
   },
   {
     "title": "Tetris",
