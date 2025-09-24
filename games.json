@@ -15,7 +15,7 @@
     "title": "Minesweeper",
     "description": "Just don't explode sucker.",
     "cover": "assets/covers/minesweeper.jpg",
-    "link": "games/Minesweeper/index.html"
+    "link": "games/minesweeper/index.html"
   },
   {
     "title": "Tetris",
