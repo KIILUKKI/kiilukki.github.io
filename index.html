@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Google Docs</title>
+  <title>GameHub</title>
 
   <!-- favicon -->
   <link rel="icon" type="image/png" href="assets/docs.png" />
@@ -25,7 +25,8 @@
 
     body {
       font-family: 'Inter', 'Segoe UI', sans-serif;
-      background: linear-gradient(180deg, #020617, #0f172a);
+      background: url("assets/background.jpg") no-repeat center center fixed;
+      background-size: cover;
       color: var(--text);
       min-height: 100vh;
       display: flex;
@@ -159,6 +160,7 @@
     <small>© 2025 Game Hub — Open-source web game collection</small>
   </footer>
 
+  <!-- Game Loader -->
   <script>
     async function loadGames() {
       const res = await fetch("games.json");
