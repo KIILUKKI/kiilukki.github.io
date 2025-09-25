@@ -114,22 +114,6 @@
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
     }
 
-    .game-card .thumb {
-      height: 180px;
-      overflow: hidden;
-    }
-
-    .game-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .game-card:hover img {
-      transform: scale(1.1);
-    }
-
     .game-card .info {
       padding: 1rem;
     }
@@ -187,9 +171,6 @@
         card.href = game.link;
 
         card.innerHTML = `
-          <div class="thumb">
-            <img src="${game.cover}" alt="${game.title}">
-          </div>
           <div class="info">
             <h2>${game.title}</h2>
             <p>${game.description}</p>
