@@ -46,5 +46,11 @@
     "description": "Pilot your ship, destroy asteroids, and survive as long as you can! Classic arcade shooter in HTML5.",
     "cover": "assets/covers/asteroids.jpg",
     "link": "games/asteroids/index.html"
+  },
+  {
+    "title": "Dino",
+    "description": "Run, jump, and duck to avoid obstacles in this endless runner!",
+    "cover": "assets/covers/dino.jpg",
+    "link": "games/dino/index.html"
   }
 ]
